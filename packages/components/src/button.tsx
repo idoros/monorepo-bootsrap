@@ -10,5 +10,3 @@ export const Button = ({ label }: { label: string }) => {
         </button>
     )
 }
-
-export const XXX = 5

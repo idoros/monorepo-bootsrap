@@ -13,6 +13,7 @@
         "clean": "rimraf packages/*/{tsconfig.tsbuildinfo,lib,dist}",
         "prestart": "yarn build",
         "build": "tsc --build",
+        "build:watch": "tsc --build --watch",
         "lint": "eslint . --ext .js,.ts,.tsx -f codeframe",
         "test:types": "lerna run test:types --stream --parallel",
         "prettify": "yarn prettier \"packages/**/*.{js,ts,tsx}\" --write"

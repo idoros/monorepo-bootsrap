@@ -2,7 +2,7 @@
     "name": "@monorepo/views",
     "version": "0.0.1",
     "description": "common views",
-    "main": "./lib/index.js",
+    "main": "./cjs/index.js",
     "types": "./lib/index.d.ts",
     "repository": "",
     "author": "Ido Rosenthal",
@@ -14,7 +14,10 @@
         "lib"
     ],
     "scripts": {
-        "test:types": "tsc --noEmit",
+        "test:types": "tsc --noEmit -p tsconfig.json",
+        "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir cjs",
+        "build:lib": "tsc -p tsconfig.json --module esnext --outDir lib",
+        "build:stylable": "stc --css --srcDir src --outDir lib",
         "start": "tsc -w --preserveWatchOutput"
     },
     "dependencies": {

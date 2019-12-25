@@ -12,11 +12,8 @@
         "lib"
     ],
     "scripts": {
-        "build:stylable": "stc --css --srcDir src --outDir lib",
-        "start": "tsc -w --preserveWatchOutput"
+        "build:stylable": "stc --css --srcDir src --outDir lib"
     },
-    "dependencies": {
-    },
-    "peerDependencies": {
-    }
+    "dependencies": {},
+    "peerDependencies": {}
 }

@@ -2,7 +2,7 @@
     "name": "@monorepo/components",
     "version": "0.0.1",
     "description": "common components",
-    "main": "./lib/index.js",
+    "main": "./cjs/index.js",
     "types": "./lib/index.d.ts",
     "repository": "",
     "author": "Ido Rosenthal",
@@ -16,6 +16,8 @@
     "scripts": {
         "test:types": "tsc --noEmit",
         "build:stylable": "stc --css --srcDir src --outDir lib",
+        "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir cjs",
+        "build:lib": "tsc -p tsconfig.json --module esnext --outDir lib",
         "start": "tsc -w --preserveWatchOutput"
     },
     "dependencies": {
