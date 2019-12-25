@@ -14,7 +14,7 @@
         "prestart": "yarn build",
         "build": "tsc --build",
         "lint": "eslint . --ext .js,.ts,.tsx -f codeframe",
-        "test:types": "tsc --noEmit",
+        "test:types": "lerna run test:types --stream --parallel",
         "prettify": "yarn prettier \"packages/**/*.{js,ts,tsx}\" --write"
     },
     "devDependencies": {

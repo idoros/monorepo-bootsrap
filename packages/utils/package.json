@@ -14,6 +14,7 @@
         "lib"
     ],
     "scripts": {
+        "test:types": "tsc --noEmit",
         "start": "tsc -w --preserveWatchOutput"
     }
 }
