@@ -2,7 +2,7 @@
     "exclude": [
         "node_modules",
         "dist",
-        "lib",
+        "lib"
     ],
     "files": [],
     "compilerOptions": {
