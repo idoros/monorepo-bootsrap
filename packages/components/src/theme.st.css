@@ -1,0 +1,28 @@
+:import {
+    -st-from: "./vars.st.css";
+    -st-named: bg, color, accent, padSize;
+}
+
+:import {
+    -st-from: "./button.st.css";
+    -st-default: Button;
+}
+
+.root {
+    background: value(bg);
+    color: value(color);
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+@st-scope .root {
+    Button {
+        position: relative;
+        background: value(bg);
+        color: value(color);
+        padding: calc(value(padSize) / 3);
+    }
+    Button::label {
+        color: value(color);
+    }
+}

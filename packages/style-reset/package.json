@@ -1,0 +1,22 @@
+{
+    "name": "@monorepo/style-reset",
+    "version": "0.0.1",
+    "description": "native elements style reset",
+    "repository": "",
+    "author": "Ido Rosenthal",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "build:stylable": "stc --css --srcDir src --outDir lib",
+        "start": "tsc -w --preserveWatchOutput"
+    },
+    "dependencies": {
+    },
+    "peerDependencies": {
+    }
+}

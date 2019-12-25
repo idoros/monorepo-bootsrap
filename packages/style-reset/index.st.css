@@ -1,0 +1,15 @@
+:import {
+    -st-from: "./src/button.st.css";
+    -st-named: root as buttonReset;
+}
+:import {
+    -st-from: "./src/input.st.css";
+    -st-named: root as inputReset;
+}
+
+.root button {
+    -st-mixin: buttonReset;
+}
+.root input {
+    -st-mixin: inputReset;
+}

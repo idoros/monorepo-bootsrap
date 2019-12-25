@@ -1,0 +1,13 @@
+  :vars {
+    bg: blue;
+    color: white;
+    accent: lightgreen;
+    padSize: 1em;
+    gapSize: 2em;
+    sepSize: 1px;
+    smallRatio: 0.7;
+    largeRatio: 1.6;
+    borderSize: 1px;
+    border: none;
+    filterShadow: none;
+}

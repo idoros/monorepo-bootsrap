@@ -1,0 +1,148 @@
+:import {
+    /* -st-from: "@monorepo/style-reset/src/index.st.css"; */
+    -st-from: "../../style-reset/index.st.css";
+    -st-default: Reset;
+}
+:import {
+    /* -st-from: "@monorepo/components/src/index.st.css"; */
+    -st-from: "../../components/index.st.css";
+    -st-named: Theme, Button, color;
+}
+:import {
+    /* -st-from: "@monorepo/views/src/index.st.css"; */
+    -st-from: "../../views/index.st.css";
+    -st-named: Theme as ViewsTheme, Header;
+}
+:global(body) {
+    background: red;
+}
+
+.root {
+    -st-mixin: Reset; /*bug: mixin is not updated if not changed here*/
+}
+
+.root { /*bug: separated mixins because the merge order seems backwards*/
+    -st-mixin: Theme(
+        color var(--color),
+        bg var(--bg)
+    );
+}
+.root Button::label {
+    --bg: var(--errorBg);
+    --color: var(--errorColor);
+    --accent: var(--errorAccent);
+}
+.root {
+    -st-mixin: ViewsTheme(
+        color var(--color),
+        bg var(--bg)
+    );
+}
+
+.root {
+    --debugColor: rgba(255, 255, 1, 0.3);
+    /*ToDo: maybe colors should just contain the hue and saturation/lightness should be contextual...*/
+    /*BASE COLORS*/
+    --color_0: hsl(210, 10%, 99%); /*ToDo: automate var light/dark scale generation*/
+    --color_1: hsl(210, 10%, 99%);
+    --color_2: hsl(208, 34%, 10%);
+    --bg_0: hsl(220, 10%, 23%);
+    --bg_1: hsl(220, 15%, 33%);
+    --bg_2: hsl(204, 74%, 48%);
+    --accent_0: hsl(115, 55%, 55%);
+
+    /*ERROR COLORS*/
+    --errorColor_0: hsl(2, 78%, 83%); /*ToDo: automate var light/dark scale generation*/
+    --errorColor_1: rgb(243, 172, 159);
+    --errorColor_2: hsl(0, 97%, 24%);
+    --errorBg_0: hsl(0, 97%, 24%);
+    --errorBg_1: hsl(0, 57%, 40%);
+    --errorBg_2: hsl(0, 71%, 52%);
+    --errorAccent_0: hsl(214, 92%, 57%);
+
+    /*COMMON THEME*/
+    --smallRatio: 0.8;
+    --largeRatio: 1.6;
+    --pad: 0.5em;
+    --sep: 2px;
+    --gap: 2em;/*ToDo: manage this better at depOverview*/
+    --filterShadow: drop-shadow(1px -5px 5px hsla(204, 21%, 10%, 0.5));
+    --borderWidth: 1px;
+    --border: var(--borderWidth) solid var(--color);
+
+    /* THEME COLLECTIONS*/
+    
+    /*main*/
+    --bg: var(--bg_0);
+    --color: var(--color_0);
+    --accent: var(--accent_0);
+
+    --errorBg: var(--errorBg_0);
+    --errorColor: var(--errorColor_0);
+    --errorAccent: var(--errorAccent_0);
+
+    --otherBg: var(--color_0); /*ToDo: automate light/dark scale apply*/
+    --otherColor: var(--bg_0);
+    --otherAccent: var(--accent_0);
+
+
+    /*middle*/
+    --middleBg: var(--bg_1);
+    --middleColor: var(--color_1);
+    --middleAccent: var(--accent_0);
+
+    --middleOtherBg: var(--color_1);
+    --middleOtherColor: var(--bg_1);
+    --middleOtherAccent: var(--accent_0);
+
+    /*front*/
+    --frontBg: var(--bg_2);
+    --frontColor: var(--color_2);
+    --frontAccent: var(--accent_0);
+
+    --frontOtherBg: var(--color_2);
+    --frontOtherColor: var(--bg_2);
+    --frontOtherAccent: var(--accent_0);
+    /*ToDo: warn & error should have a semantic theme collection*/
+}
+.root:global(.other) {
+    --color_0: hsl(172, 51%, 55%);
+    --color_1: hsl(172, 73%, 67%);
+    --color_2: hsl(172, 61%, 8%);
+    --bg_0: hsl(0, 0%, 0%);
+    --bg_1: hsl(173, 99%, 21%);
+    --bg_2: hsl(173, 74%, 47%);
+    --accent_0: hsl(38, 100%, 50%);
+
+    --errorColor_0: hsl(2, 78%, 83%); /*ToDo: automate var light/dark scale generation*/
+    --errorColor_1: rgb(243, 172, 159);
+    --errorColor_2: hsl(0, 97%, 24%);
+    --errorBg_0: hsl(0, 97%, 24%);
+    --errorBg_1: hsl(0, 57%, 40%);
+    --errorBg_2: hsl(0, 71%, 52%);
+    --errorAccent_0: hsl(214, 92%, 57%);
+}
+.root:global(.other2) {
+    --color_0: rgb(40, 74, 101);
+    --color_1: hsl(0, 0%, 100%);
+    --color_2: hsl(207, 99%, 8%);
+    --bg_0: hsl(194, 73%, 76%);
+    --bg_1: hsl(204, 100%, 70%);
+    --bg_2: hsl(208, 100%, 97%);
+    --accent_0: hsla(0, 90%, 60%, 1);
+
+    --errorColor_0: hsl(2, 78%, 83%); /*ToDo: automate var light/dark scale generation*/
+    --errorColor_1: rgb(243, 172, 159);
+    --errorColor_2: hsl(0, 97%, 24%);
+    --errorBg_0: hsl(0, 97%, 24%);
+    --errorBg_1: hsl(0, 57%, 40%);
+    --errorBg_2: hsl(0, 71%, 52%);
+    --errorAccent_0: hsl(214, 92%, 57%);
+}
+
+/* .root Button::label {
+    border: 3px solid red;
+}
+.root Header {
+    border: 5px solid salmon;
+} */

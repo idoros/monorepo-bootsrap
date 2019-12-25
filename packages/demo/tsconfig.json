@@ -1,0 +1,22 @@
+{
+    "include": [
+        "src"
+    ],
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "lib",
+        "rootDir": "src",
+        "baseUrl": "."
+    },
+    "references": [
+        {
+            "path": "../style-reset/tsconfig.json"
+        },
+        {
+            "path": "../components/tsconfig.json"
+        },
+        {
+            "path": "../views/tsconfig.json"
+        }
+    ]
+}

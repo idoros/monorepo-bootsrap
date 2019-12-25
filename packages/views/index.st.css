@@ -1,0 +1,12 @@
+:import {
+    -st-from: "./src/header.st.css";
+    -st-default: Header;
+}
+
+:import {
+    -st-from: "./src/theme.st.css";
+    -st-default: Theme;
+}
+
+.root Header {}
+.root Theme {}

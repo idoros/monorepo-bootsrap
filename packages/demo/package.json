@@ -1,0 +1,25 @@
+{
+    "name": "@monorepo/demo",
+    "private": true,
+    "version": "0.0.1",
+    "description": "Browser demos",
+    "license": "MIT",
+    "scripts": {
+        "prebuild": "yarn clean",
+        "build": "yarn bundle:prod",
+        "bundle:prod": "webpack --mode production",
+        "bundle:dev": "webpack --mode development --devtool inline-source-map",
+        "start": "webpack-dev-server --mode development --progress",
+        "prepack": "yarn build"
+    },
+    "dependencies": {
+        "@monorepo/components": "^0.0.1",
+        "@monorepo/views": "^0.0.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
+    },
+    "peerDependencies": {},
+    "devDependencies": {
+        "@monorepo/style-reset": "^0.0.1"
+    }
+}

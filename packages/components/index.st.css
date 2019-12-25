@@ -1,0 +1,17 @@
+:import {
+    -st-from: "./src/vars.st.css";
+    -st-named: bg, color, accent, padSize;
+}
+
+:import {
+    -st-from: "./src/theme.st.css";
+    -st-default: Theme;
+}
+
+:import {
+    -st-from: "./src/button.st.css";
+    -st-default: Button;
+}
+
+.root Theme {}
+.root Button {}

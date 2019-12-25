@@ -1,0 +1,19 @@
+:import {
+    /* -st-from: "@monorepo/components/src/index.st.css"; */
+    -st-from: "../../components/index.st.css";
+    -st-named: color, bg, padSize;
+}
+
+:import {
+    -st-from: "./header.st.css";
+    -st-default: Header;
+}
+
+@st-scope .root {
+    Header {
+        position: relative;
+        background: value(bg);
+        color: value(color);
+        padding: calc(value(padSize) / 2);
+    }
+}
