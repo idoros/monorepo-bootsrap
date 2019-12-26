@@ -3,4 +3,5 @@ cjs
 esm
 umd
 dist
+lib
 scripts
