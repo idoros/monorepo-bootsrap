@@ -1,5 +1,10 @@
 {
     "extends": "./tsconfig.json",
+    "exclude": [
+        "node_modules",
+        "dist",
+        "lib"
+    ],
     "include": [
         "packages/*/**/*.ts",
         "packages/*/**/*.tsx",

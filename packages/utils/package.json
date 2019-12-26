@@ -15,6 +15,7 @@
     ],
     "scripts": {
         "test:types": "tsc --noEmit",
+        "test:js": "mocha -P=../../ \"./**/*.spec.ts\"",
         "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir cjs",
         "build:lib": "tsc -p tsconfig.json --module esnext --outDir lib",
         "start": "tsc -w --preserveWatchOutput"
