@@ -1,9 +1,9 @@
-import { Button } from '../../index'
+import { Button } from '../src/index'
 import React from 'react'
 import ReactServer from 'react-dom/server'
 import { expect } from 'chai'
 
-describe(`components`, () => {
+describe(`components outside`, () => {
 
     it(`should component render`, () => {
         const res = ReactServer.renderToString(<Button label="AbCd" />)

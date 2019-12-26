@@ -1,4 +1,4 @@
-import { convertToUppercase } from '../../index'
+import { convertToUppercase } from '../src/index'
 import { expect } from 'chai'
 
 describe(`utils`, () => {
