@@ -6,7 +6,7 @@
     "license": "MIT",
     "scripts": {
         "prebuild": "yarn clean",
-        "test:types": "tsc --noEmit",
+        "test:types": "tsc -p ../../tsconfig.test.json --noEmit",
         "build": "yarn bundle:prod",
         "bundle:prod": "webpack --mode production",
         "bundle:dev": "webpack --mode development --devtool inline-source-map",
