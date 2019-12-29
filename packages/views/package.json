@@ -14,7 +14,6 @@
         "lib"
     ],
     "scripts": {
-        "test:types": "tsc -p ../../tsconfig.test.json --noEmit",
         "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir cjs",
         "build:lib": "tsc -p tsconfig.json --module esnext --outDir lib",
         "build:stylable": "stc --css --srcDir src --outDir lib",

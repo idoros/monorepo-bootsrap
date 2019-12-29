@@ -12,7 +12,7 @@
         "lib": [
             "dom",
             "es2017",
-            "esnext.asynciterable",
+            "esnext.asynciterable"
         ],
         "jsx": "react",
         "rootDir": ".",

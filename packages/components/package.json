@@ -14,7 +14,6 @@
         "lib"
     ],
     "scripts": {
-        "test:types": "tsc -p ../../tsconfig.test.json --noEmit",
         "test:js": "mocha -P=../../tsconfig.test.json \"./**/*.spec.{ts,tsx}\"",
         "build:stylable": "stc --css --srcDir src --outDir lib",
         "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir cjs",
