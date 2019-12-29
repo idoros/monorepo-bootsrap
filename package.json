@@ -17,7 +17,7 @@
         "lint": "eslint . --ext .js,.ts,.tsx -f codeframe",
         "test:types": "lerna run test:types --stream --parallel",
         "test:js": "lerna run test:js --stream --parallel",
-        "test:js:watch": "mocha --watch \"./**/*.spec.{ts,tsx}\"",
+        "test:js:watch": "mocha --watch -P ./tsconfig.test.json \"./**/*.spec.{ts,tsx}\"",
         "prettify": "yarn prettier \"packages/**/*.{js,ts,tsx}\" --write"
     },
     "devDependencies": {

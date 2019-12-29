@@ -60,7 +60,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.st.css'],
         plugins: [
             new TsconfigPathsPlugin({
-                configFile: path.join(monorepoRoot, 'tsconfig.json'),
+                configFile: path.join(monorepoRoot, 'tsconfig.paths.json'),
             }),
         ],
     },

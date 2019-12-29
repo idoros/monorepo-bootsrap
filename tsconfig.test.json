@@ -1,5 +1,5 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": "./tsconfig.paths.json",
     "exclude": [
         "node_modules",
         "dist",

@@ -15,7 +15,7 @@
     ],
     "scripts": {
         "test:types": "tsc -p ../../tsconfig.test.json --noEmit",
-        "test:js": "mocha -P=../../ \"./**/*.spec.{ts,tsx}\"",
+        "test:js": "mocha -P=../../tsconfig.test.json \"./**/*.spec.{ts,tsx}\"",
         "build:stylable": "stc --css --srcDir src --outDir lib",
         "build:cjs": "tsc -p tsconfig.json --module commonjs --outDir cjs",
         "build:lib": "tsc -p tsconfig.json --module esnext --outDir lib",

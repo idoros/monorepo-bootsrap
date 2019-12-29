@@ -29,11 +29,6 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
-        "paths": {
-            "@monorepo/*": [
-                "packages/*/src"
-            ]
-        },
         "typeRoots": [
             "./node_modules/@types",
             "./custom-typings"
