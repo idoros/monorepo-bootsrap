@@ -3,13 +3,13 @@ name: Node CI
 on: [push]
 
 jobs:
-    test:
+    allTests:
         name: node ${{ matrix.node_version }} / ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
                 node_version: [13, 12, 10]
-                os: [ubuntu-latest, windows-latest, macOS-latest]
+                os: [ubuntu-latest]
         steps:
             - uses: actions/checkout@v1
             - name: Use Node.js ${{ matrix.node_version }}
@@ -21,4 +21,20 @@ jobs:
             - run: yarn build
             - run: yarn lint
             - run: yarn test:types
+            - run: yarn test:js
+    runtimeTests:
+        name: node ${{ matrix.node_version }} / ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                node_version: [13, 12, 10]
+                os: [windows-latest, macOS-latest]
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js ${{ matrix.node_version }}
+              uses: actions/setup-node@v1
+              with:
+                  node_version: ${{ matrix.node_version }}
+            - run: npm i -g yarn
+            - run: yarn
             - run: yarn test:js
