@@ -1,12 +1,12 @@
 {
-    "include": [
-        "src",
-        "test"
-    ],
-    "extends": "../../../tsconfig.test.json",
+    "extends": "../../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "lib",
-        "rootDir": "..",
-        "baseUrl": ".."
-    }
+        "outDir": "test_output",
+        "rootDir": "../../../",
+        "baseUrl": "../../../"
+    },
+    "include": [
+        "packages/*/**/*.ts",
+        "packages/*/**/*.tsx"
+    ]
 }
